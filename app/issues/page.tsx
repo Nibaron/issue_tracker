@@ -4,7 +4,7 @@ import Link from 'next/link';
 import React from 'react';
 
 const page = async() => {
-  const issues = await prisma.issue.findMany();
+  //const issues = await prisma.issue.findMany();
   return (
     <div>
       <div className='mb-5'>
@@ -12,7 +12,7 @@ const page = async() => {
           <Link href="/issues/new">New Issue</Link>
         </Button>
       </div>
-      <Table.Root variant='surface'>
+      {/* <Table.Root variant='surface'>
         <Table.Header>
           <Table.Row>
             <Table.ColumnHeaderCell>Issue</Table.ColumnHeaderCell>
@@ -21,7 +21,7 @@ const page = async() => {
           </Table.Row>
         </Table.Header>
         <Table.Body>
-          {issues.map(issue => (
+          {issues.map((issue: { id: React.Key | null | undefined; title: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined; status: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.PromiseLikeOfReactNode | null | undefined; createdAt: { toDateString: () => string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | React.PromiseLikeOfReactNode | null | undefined; }; }) => (
             <Table.Row key={issue.id}>
               <Table.Cell>
                 {issue.title}
@@ -32,7 +32,7 @@ const page = async() => {
             </Table.Row>
           ))}
         </Table.Body>
-      </Table.Root>
+      </Table.Root> */}
     </div>
   )
 }
